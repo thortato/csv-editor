@@ -19,7 +19,7 @@ export default function Dashboard({ auth }) {
         formData.append('file', file);
 
         try {
-            const response = await axios.post('/upload-file', formData, {
+            const response = await axios.post('//upload-file', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

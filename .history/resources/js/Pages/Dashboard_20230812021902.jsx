@@ -72,7 +72,7 @@ export default function Dashboard({ auth }) {
                                     </label>
                                 </div>
                                 <div class="flex justify-center">
-                                    <button type="submit" className="center">
+                                    <button type="submit" className="center btn">
                                         Upload Files
                                     </button>
                                 </div>

@@ -45,7 +45,7 @@ export default function Dashboard({ auth }) {
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div className="p-6 text-3xl text-gray-900">Welcome, {auth.user.name}</div>
-                        <div className="p-6 text-black-900">
+                        
                             <div className="container mt-5">
                             <form onSubmit={handleSubmit}>
                                 <h3 className="text-center mb-5">Upload File in Laravel</h3>
@@ -71,14 +71,12 @@ export default function Dashboard({ auth }) {
                                         {file ? file.name : 'Select file'}
                                     </label>
                                 </div>
-                                <div class="flex justify-center">
-                                    <button type="submit" className="center">
-                                        Upload Files
-                                    </button>
-                                </div>
+                                <button type="submit" className="content-center btn btn-primary btn-block mt-4">
+                                    Upload Files
+                                </button>
                             </form>
                         </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

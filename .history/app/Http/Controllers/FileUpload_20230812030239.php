@@ -8,7 +8,7 @@ use App\Models\File;
 class FileUpload extends Controller
 {
     public function createForm(){
-        return view('file-upload');
+        return view('/dashboard');
       }
       public function fileUpload(Request $req){
             $req->validate([

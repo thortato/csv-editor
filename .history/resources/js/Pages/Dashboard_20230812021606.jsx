@@ -71,11 +71,9 @@ export default function Dashboard({ auth }) {
                                         {file ? file.name : 'Select file'}
                                     </label>
                                 </div>
-                                <div class="flex justify-center">
-                                    <button type="submit" className="center">
-                                        Upload Files
-                                    </button>
-                                </div>
+                                <button type="submit" className="text-center mb-5">
+                                    Upload Files
+                                </button>
                             </form>
                         </div>
                         </div>
