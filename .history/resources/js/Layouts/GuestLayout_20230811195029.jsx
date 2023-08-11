@@ -6,8 +6,8 @@ export default function Guest({ children }) {
         <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
             <div>
                 <Link href="/">
-                    {/* <h1>CSV Editor</h1> */}
-                    <h1 className="text-3xl font-bold text-teal">CSV Editor</h1>
+                    {/* <h1 className="text-lg">CSV Editor</h1> */}
+                   
                 </Link>
             </div>
 

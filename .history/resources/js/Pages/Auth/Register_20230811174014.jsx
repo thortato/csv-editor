@@ -26,13 +26,19 @@ export default function Register() {
         post(route('register'));
     };
 
+    const [showPassword, setShowPassword] = React.useState(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
+
     return (
         <GuestLayout>
             <Head title="Register" />
 
             <form onSubmit={submit}>
                 <div>
-                    <InputLabel htmlFor="name" value="Full Name" />
+                    <InputLabel htmlFor="name" value="Name" />
 
                     <TextInput
                         id="name"
@@ -70,7 +76,7 @@ export default function Register() {
 
                     <TextInput
                         id="password"
-                        type="password"
+                        type={showPassword ? 'text' : 'password'}
                         name="password"
                         value={data.password}
                         className="mt-1 block w-full"

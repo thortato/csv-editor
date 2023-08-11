@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import React, { useState } from 'react';
 import Checkbox from '@/Components/Checkbox';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
@@ -28,11 +27,10 @@ export default function Login({ status, canResetPassword }) {
         post(route('login'));
     };
 
-    const [showPassword, setShowPassword] = useState(false);
-
-    const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
-    };
+    // const [showPassword, setShowPassword] = React.useState(false);
+    // const togglePasswordVisibility = () => {
+    //     setShowPassword(!showPassword);
+    // };
 
     return (
         <GuestLayout>
@@ -58,7 +56,7 @@ export default function Login({ status, canResetPassword }) {
                     <InputError message={errors.email} className="mt-2" />
                 </div>
 
-                <div className="mt-4">
+                {/* <div className="mt-4">
                     <InputLabel htmlFor="password" value="Password" />
 
                     <TextInput
@@ -70,20 +68,20 @@ export default function Login({ status, canResetPassword }) {
                         autoComplete="current-password"
                         onChange={(e) => setData('password', e.target.value)}
                     />
-                    
-                    <InputError message={errors.password} className="mt-2" />
-                </div>
 
-                <div className="block mt-4">
+                    <InputError message={errors.password} className="mt-2" />
+                </div> */}
+
+                {/* <div className="block mt-4">
                 <label className="flex items-center">
                     <Checkbox
-                        name="togglePassword"
-                        checked={showPassword} // Use the state variable to control the checkbox
-                        onChange={togglePasswordVisibility} // Toggle password visibility
+                        name="showPassword"
+                        checked={showPassword}
+                        onChange={togglePasswordVisibility}
                     />
-                    <span className="ml-2 text-sm text-gray-600">Show/hide password</span>
+                    <span className="ml-2 text-sm text-gray-600">Show/Hide Password</span>
                 </label>
-                </div>
+                </div> */}
 
                 <div className="block mt-4">
                     <label className="flex items-center">

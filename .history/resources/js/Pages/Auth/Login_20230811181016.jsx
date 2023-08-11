@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import React, { useState } from 'react';
 import Checkbox from '@/Components/Checkbox';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
@@ -27,8 +26,6 @@ export default function Login({ status, canResetPassword }) {
 
         post(route('login'));
     };
-
-    const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -75,17 +72,6 @@ export default function Login({ status, canResetPassword }) {
                 </div>
 
                 <div className="block mt-4">
-                <label className="flex items-center">
-                    <Checkbox
-                        name="togglePassword"
-                        checked={showPassword} // Use the state variable to control the checkbox
-                        onChange={togglePasswordVisibility} // Toggle password visibility
-                    />
-                    <span className="ml-2 text-sm text-gray-600">Show/hide password</span>
-                </label>
-                </div>
-
-                <div className="block mt-4">
                     <label className="flex items-center">
                         <Checkbox
                             name="remember"
@@ -93,6 +79,19 @@ export default function Login({ status, canResetPassword }) {
                             onChange={(e) => setData('remember', e.target.checked)}
                         />
                         <span className="ml-2 text-sm text-gray-600">Remember me</span>
+                    </label>
+                </div>
+
+                <div className="block mt-4">
+                    <label className="flex items-center">
+                        <Checkbox
+                            name="showPassword"
+                            checked={showPassword}
+                            onChange={togglePasswordVisibility}
+                        />
+                        <span className="ml-2 text-sm text-gray-600">
+                            Show Password
+                        </span>
                     </label>
                 </div>
 

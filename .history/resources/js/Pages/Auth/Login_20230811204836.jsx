@@ -75,17 +75,6 @@ export default function Login({ status, canResetPassword }) {
                 </div>
 
                 <div className="block mt-4">
-                <label className="flex items-center">
-                    <Checkbox
-                        name="togglePassword"
-                        checked={showPassword} // Use the state variable to control the checkbox
-                        onChange={togglePasswordVisibility} // Toggle password visibility
-                    />
-                    <span className="ml-2 text-sm text-gray-600">Show/hide password</span>
-                </label>
-                </div>
-
-                <div className="block mt-4">
                     <label className="flex items-center">
                         <Checkbox
                             name="remember"

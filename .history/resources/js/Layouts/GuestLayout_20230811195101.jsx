@@ -7,7 +7,7 @@ export default function Guest({ children }) {
             <div>
                 <Link href="/">
                     {/* <h1>CSV Editor</h1> */}
-                    <h1 className="text-3xl font-bold text-teal">CSV Editor</h1>
+                    <h1 className="text-8xl">CSV Editor</h1>
                 </Link>
             </div>
 

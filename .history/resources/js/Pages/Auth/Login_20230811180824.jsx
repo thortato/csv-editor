@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import React, { useState } from 'react';
 import Checkbox from '@/Components/Checkbox';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
@@ -27,8 +26,6 @@ export default function Login({ status, canResetPassword }) {
 
         post(route('login'));
     };
-
-    const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -70,19 +67,10 @@ export default function Login({ status, canResetPassword }) {
                         autoComplete="current-password"
                         onChange={(e) => setData('password', e.target.value)}
                     />
-                    
+                    <button onClick={togglePasswordVisibility}>
+                    {showPassword ? 'Hide Password' : 'Show Password'}
+                    </button>
                     <InputError message={errors.password} className="mt-2" />
-                </div>
-
-                <div className="block mt-4">
-                <label className="flex items-center">
-                    <Checkbox
-                        name="togglePassword"
-                        checked={showPassword} // Use the state variable to control the checkbox
-                        onChange={togglePasswordVisibility} // Toggle password visibility
-                    />
-                    <span className="ml-2 text-sm text-gray-600">Show/hide password</span>
-                </label>
                 </div>
 
                 <div className="block mt-4">

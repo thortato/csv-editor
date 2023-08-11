@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import React, { useState } from 'react';
 import Checkbox from '@/Components/Checkbox';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
@@ -28,7 +27,8 @@ export default function Login({ status, canResetPassword }) {
         post(route('login'));
     };
 
-    const [showPassword, setShowPassword] = useState(false);
+    const [passwordData, setpasswordData] = useState({ password: '', remember: false });
+    const [showPassword, setShowPassword] = useState(false); // State for toggling password visibility
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -63,26 +63,27 @@ export default function Login({ status, canResetPassword }) {
 
                     <TextInput
                         id="password"
-                        type={showPassword ? 'text' : 'password'}
+                        type={showPassword ? 'text' : 'password'} // Toggle input type based on showPassword state
                         name="password"
                         value={data.password}
                         className="mt-1 block w-full"
                         autoComplete="current-password"
                         onChange={(e) => setData('password', e.target.value)}
                     />
-                    
+
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
+                {/* Password Toggle */}
                 <div className="block mt-4">
-                <label className="flex items-center">
-                    <Checkbox
-                        name="togglePassword"
-                        checked={showPassword} // Use the state variable to control the checkbox
-                        onChange={togglePasswordVisibility} // Toggle password visibility
-                    />
-                    <span className="ml-2 text-sm text-gray-600">Show/hide password</span>
-                </label>
+                    <label className="flex items-center">
+                        <Checkbox
+                            name="passwordToggle"
+                            checked={data.passwordToggle}
+                            onChange={(e) => setData('passwordToggle', e.target.checked)}
+                        />
+                        <span className="ml-2 text-sm text-gray-600">Show/Hide Password</span>
+                    </label>
                 </div>
 
                 <div className="block mt-4">

@@ -48,7 +48,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                         </svg> */}
                     </div>
 
-                    {/* <div className="mt-16">
+                    <div className="mt-16">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                             <a
                                 href="https://laravel.com/docs"
@@ -289,7 +289,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                 </div>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
 
                     <div className="flex justify-center mt-16 px-6 sm:items-center sm:justify-between">
                         <div className="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
