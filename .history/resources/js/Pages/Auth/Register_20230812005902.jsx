@@ -94,7 +94,7 @@ export default function Register() {
 
                     <TextInput
                         id="password_confirmation"
-                        type={showPassword ? 'text' : 'password'}
+                        type="password"
                         name="password_confirmation"
                         value={data.password_confirmation}
                         className="mt-1 block w-full"

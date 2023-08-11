@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import GuestLayout from '@/Layouts/GuestLayout';
-import Checkbox from '@/Components/Checkbox';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
@@ -89,12 +88,23 @@ export default function Register() {
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
+                <div className="block mt-4">
+                    <label className="flex items-center">
+                        {/* <Checkbox
+                            name="togglePassword"
+                            checked={showPassword} // Use the state variable to control the checkbox
+                            onChange={togglePasswordVisibility} // Toggle password visibility
+                        /> */}
+                        <span className="ml-2 text-sm text-gray-600">{showPassword ? 'Hide' : 'Show'} password</span>
+                    </label>
+                </div>
+
                 <div className="mt-4">
                     <InputLabel htmlFor="password_confirmation" value="Confirm Password" />
 
                     <TextInput
                         id="password_confirmation"
-                        type={showPassword ? 'text' : 'password'}
+                        type="password"
                         name="password_confirmation"
                         value={data.password_confirmation}
                         className="mt-1 block w-full"
@@ -104,17 +114,6 @@ export default function Register() {
                     />
 
                     <InputError message={errors.password_confirmation} className="mt-2" />
-                </div>
-
-                <div className="block mt-4">
-                    <label className="flex items-center">
-                        <Checkbox
-                            name="togglePassword"
-                            checked={showPassword} // Use the state variable to control the checkbox
-                            onChange={togglePasswordVisibility} // Toggle password visibility
-                        />
-                        <span className="ml-2 text-sm text-gray-600">{showPassword ? 'Hide' : 'Show'} password</span>
-                    </label>
                 </div>
 
                 <div className="flex items-center justify-end mt-4">

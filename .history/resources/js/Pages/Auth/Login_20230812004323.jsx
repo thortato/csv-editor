@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import React, { useState } from 'react';
 import Checkbox from '@/Components/Checkbox';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
+import PasswordToggle from '@/Components/PasswordToggle';
 import { Head, Link, useForm } from '@inertiajs/react';
 
 export default function Login({ status, canResetPassword }) {
@@ -73,14 +75,14 @@ export default function Login({ status, canResetPassword }) {
                 </div>
 
                 <div className="block mt-4">
-                    <label className="flex items-center">
-                        <Checkbox
-                            name="togglePassword"
-                            checked={showPassword} // Use the state variable to control the checkbox
-                            onChange={togglePasswordVisibility} // Toggle password visibility
-                        />
-                        <span className="ml-2 text-sm text-gray-600">{showPassword ? 'Hide' : 'Show'} password</span>
-                    </label>
+                <label className="flex items-center">
+                    <Checkbox
+                        name="togglePassword"
+                        checked={showPassword} // Use the state variable to control the checkbox
+                        onChange={togglePasswordVisibility} // Toggle password visibility
+                    />
+                    <span className="ml-2 text-sm text-gray-600">{showPassword ? 'Show' : 'Hide'} password</span>
+                </label>
                 </div>
 
                 <div className="block mt-4">

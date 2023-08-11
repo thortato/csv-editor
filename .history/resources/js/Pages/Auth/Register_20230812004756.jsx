@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import React, { useState } from 'react';
 import GuestLayout from '@/Layouts/GuestLayout';
-import Checkbox from '@/Components/Checkbox';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
@@ -94,7 +94,7 @@ export default function Register() {
 
                     <TextInput
                         id="password_confirmation"
-                        type={showPassword ? 'text' : 'password'}
+                        type="password"
                         name="password_confirmation"
                         value={data.password_confirmation}
                         className="mt-1 block w-full"
