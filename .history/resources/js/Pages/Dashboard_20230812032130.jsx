@@ -30,7 +30,7 @@ export default function Dashboard({ auth }) {
         } catch (error) {
             console.log(error);
             setErrorMessage('An error occurred while uploading the file.');
-            setSuccessMessage('File Uploaded!');
+            setSuccessMessage('');
         }
     };
 
@@ -72,7 +72,7 @@ export default function Dashboard({ auth }) {
                                         {file ? file.name : 'Select file'}
                                     </label>
                                 </div>
-                                <div className="flex justify-center">
+                                <div class="flex justify-center">
                                     <button type="submit" className="center">
                                         Upload Files
                                     </button>
