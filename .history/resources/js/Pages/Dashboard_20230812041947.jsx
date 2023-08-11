@@ -30,7 +30,7 @@ export default function Dashboard({ auth }) {
         } catch (error) {
             console.log(error);
             setErrorMessage('An error occurred while uploading the file.');
-            setSuccessMessage('');
+            setSuccessMessage('File Uploaded!');
         }
     };
 
@@ -65,7 +65,7 @@ export default function Dashboard({ auth }) {
                                     <input
                                         type="file"
                                         name="file"
-                                        className="custom-file-input border border-black-700 py-2"
+                                        className="custom-file-input border border-black-700 py-2 bg-teal"
                                         id="chooseFile"
                                         onChange={handleFileChange}
                                     />
@@ -75,7 +75,7 @@ export default function Dashboard({ auth }) {
                                 </div>
 
                                 <div className="flex justify-center">
-                                    <button type="submit" className="center bg-teal hover:bg-[1D7874] text-white font-bold my-2 py-2 px-4 rounded">
+                                    <button type="submit" className="center bg-teal hover:bg-[1D7874] text-white font-bold py-2 px-4 rounded">
                                         Upload Files
                                     </button>
                                 </div>

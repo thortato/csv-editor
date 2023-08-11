@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
-import Checkbox from '@/Components/Checkbox';
 import TextInput from '@/Components/TextInput';
 import { useForm } from '@inertiajs/react';
 import { Transition } from '@headlessui/react';
@@ -99,17 +98,6 @@ export default function UpdatePasswordForm({ className = '' }) {
                     />
 
                     <InputError message={errors.password_confirmation} className="mt-2" />
-                </div>
-
-                <div className="block mt-4">
-                    <label className="flex items-center">
-                        <Checkbox
-                            name="togglePassword"
-                            checked={showPassword} // Use the state variable to control the checkbox
-                            onChange={togglePasswordVisibility} // Toggle password visibility
-                        />
-                        <span className="ml-2 text-sm text-gray-600">{showPassword ? 'Hide' : 'Show'} password</span>
-                    </label>
                 </div>
 
                 <div className="flex items-center gap-4">

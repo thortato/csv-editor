@@ -30,7 +30,7 @@ export default function Dashboard({ auth }) {
         } catch (error) {
             console.log(error);
             setErrorMessage('An error occurred while uploading the file.');
-            setSuccessMessage('');
+            setSuccessMessage('File Uploaded!');
         }
     };
 
@@ -60,22 +60,21 @@ export default function Dashboard({ auth }) {
                                         <strong>{errorMessage}</strong>
                                     </div>
                                 )}
-
-                                <div className="custom-file flex justify-center ">
+                                <div className="flex justify-center">
+                                <div className="custom-file">
                                     <input
                                         type="file"
                                         name="file"
-                                        className="custom-file-input border border-black-700 py-2"
+                                        className="custom-file-input"
                                         id="chooseFile"
                                         onChange={handleFileChange}
                                     />
-                                    {/* <label className="custom-file-label bg-teal hover:bg-[1D7874] text-white font-bold py-2 rounded" htmlFor="chooseFile">
+                                    <label className="custom-file-label" htmlFor="chooseFile">
                                         {file ? file.name : 'Select file'}
-                                    </label> */}
+                                    </label>
                                 </div>
-
-                                <div className="flex justify-center">
-                                    <button type="submit" className="center bg-teal hover:bg-[1D7874] text-white font-bold my-2 py-2 px-4 rounded">
+                                
+                                    <button type="submit" className="center">
                                         Upload Files
                                     </button>
                                 </div>

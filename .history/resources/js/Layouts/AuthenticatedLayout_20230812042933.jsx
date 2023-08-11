@@ -14,11 +14,11 @@ export default function Authenticated({ user, header, children }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         <div className="flex">
-                            <div className="shrink-0 flex items-center">
-                                 <Link href="/">
-                                    <h1 className='block h-9 text-5xl font-bold text-teal mb-2'>CSV</h1>
-                                    {/* <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" /> */}
-                                </Link> 
+                            <div className="shrink-0 flex items-center justify-center">
+                                <h1 className='block h-9 text-5xl font-bold text-teal'>CSV</h1>
+                                {/* <Link href="/">
+                                    <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" />
+                                </Link> */}
                             </div>
 
                             <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -94,7 +94,7 @@ export default function Authenticated({ user, header, children }) {
                 <div className={(showingNavigationDropdown ? 'block' : 'hidden') + ' sm:hidden'}>
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
-                            Dashboard
+                            Dashboards
                         </ResponsiveNavLink>
                     </div>
 

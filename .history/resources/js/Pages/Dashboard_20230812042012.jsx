@@ -30,7 +30,7 @@ export default function Dashboard({ auth }) {
         } catch (error) {
             console.log(error);
             setErrorMessage('An error occurred while uploading the file.');
-            setSuccessMessage('');
+            setSuccessMessage('File Uploaded!');
         }
     };
 

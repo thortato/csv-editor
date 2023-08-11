@@ -30,7 +30,7 @@ export default function Dashboard({ auth }) {
         } catch (error) {
             console.log(error);
             setErrorMessage('An error occurred while uploading the file.');
-            setSuccessMessage('');
+            setSuccessMessage('File Uploaded!');
         }
     };
 
@@ -69,13 +69,13 @@ export default function Dashboard({ auth }) {
                                         id="chooseFile"
                                         onChange={handleFileChange}
                                     />
-                                    {/* <label className="custom-file-label bg-teal hover:bg-[1D7874] text-white font-bold py-2 rounded" htmlFor="chooseFile">
+                                    <label className="custom-file-label bg-teal hover:bg-[1D7874] text-white font-bold py-2 rounded" htmlFor="chooseFile">
                                         {file ? file.name : 'Select file'}
-                                    </label> */}
+                                    </label>
                                 </div>
 
                                 <div className="flex justify-center">
-                                    <button type="submit" className="center bg-teal hover:bg-[1D7874] text-white font-bold my-2 py-2 px-4 rounded">
+                                    <button type="submit" className="center bg-teal hover:bg-[1D7874] text-white font-bold py-2 px-4 rounded">
                                         Upload Files
                                     </button>
                                 </div>

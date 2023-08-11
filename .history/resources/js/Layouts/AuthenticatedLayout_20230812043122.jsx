@@ -14,9 +14,9 @@ export default function Authenticated({ user, header, children }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         <div className="flex">
-                            <div className="shrink-0 flex items-center">
+                            <div className="shrink-0 flex items-center my-2">
                                  <Link href="/">
-                                    <h1 className='block h-9 text-5xl font-bold text-teal mb-2'>CSV</h1>
+                                    <h1 className='block h-9 text-5xl font-bold text-teal'>CSV</h1>
                                     {/* <ApplicationLogo className="block h-9 w-auto fill-current text-gray-800" /> */}
                                 </Link> 
                             </div>
