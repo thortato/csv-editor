@@ -24,13 +24,12 @@ export default function Authenticated({ user, header, children }) {
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                                     Dashboard
                                 </NavLink>
-                                <NavLink href={route('editor')} active={route().current('editor')}>
-                                    Editor
+                                <NavLink>
+                                    Modify
                                 </NavLink>
                             </div>
                         </div>
 
-                        {/* profile */}
                         <div className="hidden sm:flex sm:items-center sm:ml-6">
                             <div className="ml-3 relative">
                                 <Dropdown>
@@ -98,9 +97,6 @@ export default function Authenticated({ user, header, children }) {
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
                             Dashboard
-                        </ResponsiveNavLink>
-                        <ResponsiveNavLink href={route('editor')} active={route().current('editor')}>
-                            Editor
                         </ResponsiveNavLink>
                     </div>
 
