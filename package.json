@@ -21,6 +21,8 @@
     },
     "dependencies": {
         "ag-grid-community": "^30.1.0",
-        "ag-grid-react": "^30.1.0"
+        "ag-grid-react": "^30.1.0",
+        "papaparse": "^5.4.1",
+        "react-google-recaptcha3": "^1.0.4"
     }
 }
