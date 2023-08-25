@@ -16,7 +16,7 @@ class CsvFile extends Controller
         $uploads = Storage::disk('public')->files('uploads');
         $fileslength = count($uploads)-1;
         $name = $uploads[$fileslength];
-        return response()->file(storage_path('app\public\\'.$name));    
+        return response()->file(storage_path('app\public\uploads\1692939269_tes.csv'));    
         // return response($files);
         // return response()->file(Storage::disc($name))
         // return response()->file(Storage::disk('public')->get($name));

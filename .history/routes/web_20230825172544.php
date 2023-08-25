@@ -46,8 +46,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/upload-file', [FileUpload::class, 'createForm']);
 Route::post('/upload-file', [FileUpload::class, 'fileUpload'])->name('dashboard.fileUpload');
 
-Route::get("/uploads/{id}", [CsvFile::class, "show"]);
-Route::get("/uploads", [CsvFile::class, "index"]);
+Route::get("/files/{id}", [CsvFile::class, "show"]);
+Route::get("/files", [CsvFile::class, "index"]);
 
 
 require __DIR__.'/auth.php';

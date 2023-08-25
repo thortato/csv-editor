@@ -70,20 +70,19 @@ export default function Dashboard({ auth }) {
     // }, []);
 
     useEffect(() => {
-        // Step 1: Fetch the initial URL to get the target URL
-        fetch('http://127.0.0.1:8000/uploads')
+        // Replace 'Sample.csv' with the correct path to your CSV file
+        fetch('http://127.0.0.1:8000/files/', {
+            
+        })
           .then(response => response.text())
-          .then(csvContent => {
-            // Step 3: Parse the CSV content using PapaParse
-            const result = Papa.parse(csvContent, { header: true });
+          .then(text => {
+            const result = Papa.parse(text, { header: true }); // Parsing CSV with headers
             setRowData(result.data);
           })
-          .catch(error => {
-            console.error("Error fetching initial URL:", error);
-          });
+          .catch(error => console.error('Error fetching CSV:', error));
       }, []);
+  
     
-      
 
     //download as CSV
     const onBtnExport = useCallback(() => {
